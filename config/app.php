@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Siiau'),
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -159,13 +159,15 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        // Idioma español
+        Laraveles\Spanish\SpanishServiceProvider::class,
 
     ],
 
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------
     |
     | This array of class aliases will be registered when this application
     | is started. However, feel free to register as many as you wish as
