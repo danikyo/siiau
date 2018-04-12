@@ -18,3 +18,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'auth', 'namespace' => 'Academica'], function () {
+
+	Route::get('/horario', 'HorarioController@index');
+	Route::get('/boleta', 'BoletaController@index');
+	Route::get('/kardex', 'KardexController@index');
+	Route::get('/constancia', 'ConstanciaController@index');
+});
+
+Route::group(['middleware' => 'auth', 'namespace' => 'Registro'], function () {
+	Route::get('/oferta_academica', 'OfertaAcademicaController@index');
+	Route::get('/pre_registro', 'PreRegsitroController@index');
+	Route::get('/registrar_materias', 'RegistrarMateriasController@index');
+	Route::get('/registro_movilidad', 'RegistroMovilidadController@index');
+	Route::get('/servicio_social', 'RegistroMovilidadController@index');
+});

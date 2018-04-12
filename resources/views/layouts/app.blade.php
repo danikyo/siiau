@@ -40,21 +40,21 @@
           <li class="active">
             <a href="#subAcademica" data-toggle="collapse" aria-expanded="false">Académica</a>
             <ul class="collapse list-unstyled" id="subAcademica">
-              <li><a href="#">Horario</a></li>
+              <li><a href="/horario">Horario</a></li>
               <li><a href="#">Materias</a></li>
-              <li><a href="#">Boleta</a></li>
+              <li><a href="/boleta">Boleta</a></li>
               <li><a href="#">Constancia</a></li>
-              <li><a href="#">Kardex</a></li>
+              <li><a href="/kardex">Kardex</a></li>
             </ul>
           </li>
           <li class="active">
             <a href="#subRegistro" data-toggle="collapse" aria-expanded="false">Registro</a>
             <ul class="collapse list-unstyled" id="subRegistro">
-              <li><a href="#">Registrar Materias</a></li>
-              <li><a href="#">Registro Movilidad</a></li>
-              <li><a href="#">Servicio Social</a></li>
-              <li><a href="#">Oferta Académica</a></li>
-              <li><a href="#">Pre-registro</a></li>
+              <li><a href="/registrar_materias">Registrar Materias</a></li>
+              <li><a href="/registro_movilidad">Registro Movilidad</a></li>
+              <li><a href="/servicio_social">Servicio Social</a></li>
+              <li><a href="/oferta_academica">Oferta Académica</a></li>
+              <li><a href="/pre_registro">Pre-registro</a></li>
             </ul>
           </li>
           <li class="active">
