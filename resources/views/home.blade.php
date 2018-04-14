@@ -1,30 +1,29 @@
-@extends('layouts.app')
+@extends('layouts.sidebar')
 
 @section('content')
+
 <div class="card text-center">
-  <div class="card-header">
-    Datos del Estudiante
-  </div>
+  <img class="card-img-top mx-auto" src="images/example.png" alt="Card image cap" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{ Auth::user()->name }}</h5>
-    <p class="card-text">Status: Activo</p>
+    <p class="card-text">Status: <i class="text-success">Activo</i></p>
     <table class="table table-sm">
       <tbody>
         <tr>
-          <th class="table-dark" scope="row">Admisión</th>
-          <td colspan="2">2014 A</td>
+          <th class="bg-info" scope="row">Admisión</th>
+          <td colspan="2" class="table-info">2014 A</td>
         </tr>
         <tr>
-          <th class="table-dark" scope="row">Nivel</th>
-          <td colspan="2">Licenciatura</td>
+          <th class="bg-info" scope="row">Nivel</th>
+          <td colspan="2" class="table-info">Licenciatura</td>
         </tr>
         <tr>
-          <th class="table-dark" scope="row">Carrera</th>
-          <td colspan="2">Ingeniería en informática</td>
+          <th class="bg-info" scope="row">Carrera</th>
+          <td colspan="2" class="table-info">Ingeniería en informática</td>
         </tr>
         <tr>
-          <th class="table-dark" scope="row">Centro</th>
-          <td colspan="2">Centro de Ciencias Exactas e Ingenierías</td>
+          <th class="bg-info" scope="row">Centro</th>
+          <td colspan="2" class="table-info">Centro de Ciencias Exactas e Ingenierías</td>
         </tr>
       </tbody>
     </table>
