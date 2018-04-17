@@ -11,16 +11,18 @@
     <title>{{ config('app.name', 'Siiau') }}</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('vendor/bootstrap/css/bootstrap.min.css') }}">
     <!-- Custom fonts for this template-->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url('vendor/font-awesome/css/font-awesome.min.css') }}">
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('css/sb-admin.css') }}">
+
+    <link href="https://snatchbot.me/sdk/webchat.css" rel="stylesheet" type="text/css">
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top sbcm" id="mainNav">
-    <a class="navbar-brand" href="/home">SIIAU <img src="images/logo.png" style="width: 1rem; margin-bottom: 5px;"></a>
+    <a class="navbar-brand" href="/home">SIIAU <img src="{{ url('images/logo.png') }}" style="width: 1rem; margin-bottom: 5px;"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,11 +34,11 @@
             <span class="nav-link-text">Académica</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseAcademica">
-            <li><a class="sbc" href="/horario"">Horario</a></li>
-            <li><a class="sbc" href="/materias">Materias</a></li>
-            <li><a class="sbc" href="/boleta">Boleta</a></li>
-            <li><a class="sbc" href="/constancia">Constancia</a></li>
-            <li><a class="sbc" href="/kardex">Kardex</a></li>
+            <li><a class="sbc" href="{{ url('horario') }}">Horario</a></li>
+            <li><a class="sbc" href="{{ url('materias') }}">Materias</a></li>
+            <li><a class="sbc" href="{{ url('boleta') }}">Boleta</a></li>
+            <li><a class="sbc" href="{{ url('constancia') }}">Constancia</a></li>
+            <li><a class="sbc" href="{{ url('kardex') }}">Kardex</a></li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Registro">
@@ -45,11 +47,11 @@
             <span class="nav-link-text sbc-text">Registro</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseRegistro">
-            <li><a class="sbc" href="/registrar_materias">Registrar Materias</a></li>
-            <li><a class="sbc" href="/registro_movilidad">Registro Movilidad</a></li>
-            <li><a class="sbc" href="/servicio_social">Servicio Social</a></li>
-            <li><a class="sbc" href="/oferta_academica">Oferta Academica</a></li>
-            <li><a class="sbc" href="/pre_registro">Pre Registro</a></li>
+            <li><a class="sbc" href="{{ url('registrar_materias') }}">Registrar Materias</a></li>
+            <li><a class="sbc" href="{{ url('registro_movilidad') }}">Registro Movilidad</a></li>
+            <li><a class="sbc" href="{{ url('servicio_social') }}">Servicio Social</a></li>
+            <li><a class="sbc" href="{{ url('oferta_academica') }}">Oferta Academica</a></li>
+            <li><a class="sbc" href="{{ url('pre_registro') }}">Pre Registro</a></li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Servicios">
@@ -58,7 +60,7 @@
             <span class="nav-link-text sbc-text">Servicios</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseServicios">
-            <li><a class="sbc" href="navbar.html">Google Drive</a></li>
+            <li><a class="sbc" href="{{ url('servicios/google') }}">Google Drive</a></li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tramites">
@@ -67,9 +69,9 @@
             <span class="nav-link-text sbc-text">Tramites</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseTramites">
-            <li><a class="sbc" href="navbar.html">Solicitar Credencial</a></li>
-            <li><a class="sbc" href="navbar.html">Artículo 34</a></li>
-            <li><a class="sbc" href="navbar.html">Artículo 35</a></li>
+            <li><a class="sbc" href="{{ url('tramites/credencial') }}">Solicitar Credencial</a></li>
+            <li><a class="sbc" href="{{ url('tramites/art34') }}">Artículo 34</a></li>
+            <li><a class="sbc" href="{{ url('tramites/art35') }}">Artículo 35</a></li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Configuración">
@@ -78,8 +80,8 @@
             <span class="nav-link-text sbc-text">Configuración</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseConfiguracion">
-            <li><a class="sbc" href="navbar.html">Cambio de NIP</a></li>
-            <li><a class="sbc" href="navbar.html">Método de pago</a></li>
+            <li><a class="sbc" href="{{ url('configuracion/nip') }}">Cambio de NIP</a></li>
+            <li><a class="sbc" href="{{ url('configuracion/pagos') }}">Método de pago</a></li>
           </ul>
         </li>
       </ul>
@@ -134,12 +136,20 @@
             <a class="dropdown-item small" href="#">Ver todas las notificaciones</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-money "></i>Orden de Pago</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-money"></i>Orden de pago
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Descargar</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          <a class="nav-link" href="{{ url('help') }}">
+            <i class="fa fa-fw fa-question-circle"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#sessionModal">
             <i class="fa fa-fw fa-sign-out"></i>Cerrar sesión</a>
         </li>
       </ul>
@@ -165,11 +175,11 @@
       <i class="fa fa-angle-up"></i>
     </a>
     <!-- Logout Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="sessionModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">¿Estás seguro que quieres cerrar sesión?</h5>
+            <h5 class="modal-title" id="ModalLabel">¿Estás seguro que quieres cerrar sesión?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
@@ -187,11 +197,15 @@
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="js/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--script src="js/jquery.min.js"></script-->
+    <script src="{{ url('js/jquery.min.js') }}"></script>
+    <!--script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script-->
+    <script src="{{ url('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <!--script src="js/sb-admin.min.js"></script-->
+    <script src="{{ url('js/sb-admin.min.js') }}"></script>
     <!-- Toggle between fixed and static navbar-->
+
     <script>
     $('#toggleNavPosition').click(function() {
       $('body').toggleClass('fixed-nav');

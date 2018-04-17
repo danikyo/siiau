@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Academica;
+namespace App\Http\Controllers\Servicios;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class KardexController extends Controller
+class GoogleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class KardexController extends Controller
      */
     public function index()
     {
-        return view('academica.kardex');
+        return view('servicios.google');
     }
 
     /**

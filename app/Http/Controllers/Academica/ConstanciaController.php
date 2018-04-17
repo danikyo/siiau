@@ -14,7 +14,7 @@ class ConstanciaController extends Controller
      */
     public function index()
     {
-        return view('academica.horario');
+        return view('academica.constancia');
     }
 
 

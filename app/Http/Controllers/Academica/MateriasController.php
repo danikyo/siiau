@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Academica;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class BoletaController extends Controller
+class MateriasController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +14,7 @@ class BoletaController extends Controller
      */
     public function index()
     {
-        return view('academica/boleta');
+        return view('academica.materias');
     }
 
     /**

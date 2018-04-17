@@ -3,27 +3,27 @@
 @section('content')
 
 <div class="card text-center">
-  <img class="card-img-top mx-auto" src="images/example.png" alt="Card image cap" style="width: 18rem;">
+  <img class="card-img-top mx-auto rounded-circle border img-fluid" src="{{ url('images/user.png') }}" alt="Card image cap Responsive image" style="width: 250px; height: 250px">
   <div class="card-body">
     <h5 class="card-title">{{ Auth::user()->name }}</h5>
     <p class="card-text">Status: <i class="text-success">Activo</i></p>
-    <table class="table table-sm">
+    <table class="table table-borderless table-condensed border border-white table-active">
       <tbody>
         <tr>
-          <th class="bg-info" scope="row">Admisión</th>
-          <td colspan="2" class="table-info">2014 A</td>
+          <th class="" scope="row">Admisión</th>
+          <td colspan="2" class="">2014 A</td>
         </tr>
         <tr>
-          <th class="bg-info" scope="row">Nivel</th>
-          <td colspan="2" class="table-info">Licenciatura</td>
+          <th class="" scope="row">Nivel</th>
+          <td colspan="2" class="">Licenciatura</td>
         </tr>
         <tr>
-          <th class="bg-info" scope="row">Carrera</th>
-          <td colspan="2" class="table-info">Ingeniería en informática</td>
+          <th class="" scope="row">Carrera</th>
+          <td colspan="2" class="">Ingeniería en informática</td>
         </tr>
         <tr>
-          <th class="bg-info" scope="row">Centro</th>
-          <td colspan="2" class="table-info">Centro de Ciencias Exactas e Ingenierías</td>
+          <th class="" scope="row">Centro</th>
+          <td colspan="2" class="">Centro de Ciencias Exactas e Ingenierías</td>
         </tr>
       </tbody>
     </table>
