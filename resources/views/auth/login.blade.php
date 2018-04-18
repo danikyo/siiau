@@ -7,7 +7,18 @@
         @csrf
 
         <div class="form-group">
+            <div class="col-md-6 offset-md-3">
+                <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" placeholder="CÓDIGO" required autofocus>
 
+                @if ($errors->has('username'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('username') }}</strong>
+                    </span>
+                @endif
+            </div>
+        </div>
+
+        <!--div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="CÓDIGO" required autofocus>
 
@@ -17,7 +28,7 @@
                     </span>
                 @endif
             </div>
-        </div>
+        </div-->
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
