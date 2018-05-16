@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/test', 'TestController@index');
+
 Route::get('/', function () {
     return view('auth/login');
 });
@@ -21,8 +23,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/home', 'HomeController@index')->name('home');
 	Route::get('/help', 'HelpController@index');
 });
-
-
 
 Route::group(['middleware' => 'auth', 'namespace' => 'Academica'], function () {
 
