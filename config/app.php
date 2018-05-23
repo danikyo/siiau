@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Siiau'),
+    'name' => env('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'es',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -146,6 +146,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+      
+
 
         /*
          * Package Service Providers...
@@ -159,15 +161,15 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        // Idioma español
-        Laraveles\Spanish\SpanishServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Elibyy\TCPDF\ServiceProvider::class,
 
     ],
 
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
-    |-------------------------------------------------------------------------
+    |--------------------------------------------------------------------------
     |
     | This array of class aliases will be registered when this application
     | is started. However, feel free to register as many as you wish as
@@ -210,6 +212,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'PDF' => Elibyy\TCPDF\Facades\TCPDF::class,
+        'Auth' => Illuminate\Support\Facades\Auth::class,
+
 
     ],
 

@@ -11,41 +11,48 @@
 |
 */
 
-Route::get('/test', 'TestController@index');
-
 Route::get('/', function () {
     return view('auth/login');
 });
 
+Route::get('/principal', function () {
+    return view('principal');
+});
+
+Route::get('/creacion', function () {
+    return view('auth/register');
+});
+
+//Route::get('/googleDrive', function () {
+  //  return view('googleDrive');
+//});
+
+
+
+Route::get('creartabla',function(){
+Schema :: create('products',function($tabla)
+{
+  $tabla->increments('id');
+  $tabla->string('nombre');
+});
+return "yeaah";
+});
+//googleDrive
+
+Route::get('prueba','GoogleController@creationURL');
+
+Route::post('token','GoogleController@accessTokenCreation');
+Route::get('refresh','GoogleController@refreshToken');
+Route::get('folder','GoogleController@createFolders');
+Route::get('file','GoogleController@uploadFile');
+Route::get('fifito','GoogleController@save');
+
+Route::post('metodopost','GoogleController@postMetod');
+Route::post('tokenCreation','GoogleController@accessTokenCreation');
+Route::get('metodopost','GoogleController@postMetod');
+Route::get('pruebaPdf','PdfController@generatingPdf');
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function () {
-	Route::get('/home', 'HomeController@index')->name('home');
-	Route::get('/help', 'HelpController@index');
-});
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => 'auth', 'namespace' => 'Academica'], function () {
-
-	Route::get('/horario', 'HorarioController@index');
-	Route::get('/materias', 'MateriasController@index');
-	Route::get('/boleta', 'BoletaController@index');
-	Route::get('/kardex', 'KardexController@index');
-	Route::get('/constancia', 'ConstanciaController@index');
-});
-
-Route::group(['middleware' => 'auth', 'namespace' => 'Registro'], function () {
-	Route::get('/oferta_academica', 'OfertaAcademicaController@index');
-	Route::get('/pre_registro', 'PreRegsitroController@index');
-	Route::get('/registrar_materias', 'RegistrarMateriasController@index');
-	Route::get('/registro_movilidad', 'RegistroMovilidadController@index');
-	Route::get('/servicio_social', 'RegistroMovilidadController@index');
-});
-
-Route::group(['middleware' => 'auth', 'namespace' => 'Servicios'], function () {
-	Route::get('/servicios/google', 'GoogleController@index');
-});
-
-Route::group(['middleware' => 'auth', 'namespace' => 'Configuracion'], function () {
-	Route::get('/configuracion/nip', 'NipController@index');
-	Route::get('/configuracion/pagos', 'PagosController@index');
-});
+Route::get('/googledrive', 'GoogleController@creationURL')->name('googledrive');

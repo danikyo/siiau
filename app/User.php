@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'username', 'password',
+        'name', 'email', 'password','nip','type',
     ];
 
     /**
@@ -26,22 +26,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    /**
-     * Get the student associated with the user.
-     */
-    public function student()
-    {
-        return $this->hasOne('App\Student');
-    }
-
-    public function tacher()
-    {
-        return $this->hasOne('App\Teacher');
-    }
-
-    public function googledrive()
-    {
-        return $this->hasOne('App\GoogleDrive');
-    }
 }

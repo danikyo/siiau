@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url('../photos/fondo4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+
+}
+.newstyle
+{
+  border: 1px;
+  padding: 30px 40px;
+  background: rgba(0,0,0,0.5);
+  color #ffff;
+  text-align: center;
+  padding-top: 50px;
+  position: relative;
+  transition: 1s;
+  margin-top: 25vh;
+
+}
+.newstyle:hover{
+  background: rgba(0,0,0,0.8);
+}
+.styleLetters{
+  color: #ffff;
+  font-weight: bold;
+}
